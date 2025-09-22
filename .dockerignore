@@ -2,7 +2,7 @@ node_modules
 .git
 Dockerfile
 compose.yml
-nginx/*.conf
+# nginx/*.conf
 npm-debug.log
 dist
 .DS_Store
