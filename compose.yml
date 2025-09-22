@@ -1,0 +1,10 @@
+services:
+  astro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host     # ayuda en Portainer si hay problemas de red en el build
+    image: sgaldos/astro-portfolio:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
