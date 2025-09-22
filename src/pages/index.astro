@@ -18,80 +18,89 @@ const isProd = import.meta.env.PROD;
 ---
 
 <Base>
-  {isProd ? (
-    <>
-      <div class="min-h-[75vh] flex items-center justify-center text-center px-6">
-        <div class="max-w-2xl">
-          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-            Sergio Galdos — Developer Site
-          </h1>
-          <p class="mt-6 text-2xl md:text-3xl font-semibold">
-            🚧 Under Construction
-          </p>
-          <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Estoy preparando el portfolio y los proyectos. Vuelvo muy pronto.
-          </p>
-          <div class="mt-8">
-            <Social source={social.main} className="social-icons justify-center" />
-          </div>
-        </div>
-      </div>
-      <div class="pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
-        © {new Date().getFullYear()} Sergio Galdos
-      </div>
-    </>
-  ) : (
-    <>
-      {/* profile */}
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="mx-auto text-center lg:col-8">
-              <ImageMod
-                class="mx-auto rounded-full"
-                src={image}
-                width={220}
-                height={220}
-                alt={name}
-                loading="eager"
+  {
+    isProd ? (
+      <>
+        <div class="min-h-[75vh] flex items-center justify-center text-center px-6">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+              Sergio Galdos
+            </h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+              --
+            </h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+              Developer Site
+            </h1>
+            <p class="mt-6 text-2xl md:text-3xl font-semibold">
+              🚧 Under Construction
+            </p>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+              Estoy preparando el portfolio y los proyectos. Vuelvo muy pronto.
+            </p>
+            <div class="mt-8">
+              <Social
+                source={social.main}
+                className="social-icons justify-center"
               />
-              <h1
-                set:html={markdownify(name)}
-                class="mt-12 text-6xl lg:text-8xl font-semibold"
-              />
-              <p
-                set:html={markdownify(designation)}
-                class="mt-6 text-primary text-xl"
-              />
-              <p set:html={markdownify(bio)} class="mt-4 leading-9 text-xl" />
-              <Social source={social.main} className="social-icons mt-8" />
             </div>
           </div>
         </div>
-      </div>
-  
-      {/* posts */}
-      <div class="pt-4">
-        <div class="container">
-          <div class="row">
-            <div class="mx-auto lg:col-10">
-              <div class="row g-4">
-                {
-                  sortPostByDate
-                    .slice(0, pagination)
-                    .map((post) => <Post className="col-12 sm:col-6" post={post} />)
-                }
+        <div class="pb-12 text-center text-sm text-gray-500 dark:text-gray-400">
+          © {new Date().getFullYear()} Sergio Galdos
+        </div>
+      </>
+    ) : (
+      <>
+        {/* profile */}
+        <div class="section">
+          <div class="container">
+            <div class="row">
+              <div class="mx-auto text-center lg:col-8">
+                <ImageMod
+                  class="mx-auto rounded-full"
+                  src={image}
+                  width={220}
+                  height={220}
+                  alt={name}
+                  loading="eager"
+                />
+                <h1
+                  set:html={markdownify(name)}
+                  class="mt-12 text-6xl lg:text-8xl font-semibold"
+                />
+                <p
+                  set:html={markdownify(designation)}
+                  class="mt-6 text-primary text-xl"
+                />
+                <p set:html={markdownify(bio)} class="mt-4 leading-9 text-xl" />
+                <Social source={social.main} className="social-icons mt-8" />
               </div>
             </div>
           </div>
-          <div class="mt-12">
-            <Pagination
-              totalPages={Math.ceil(posts.length / pagination)}
-              currentPage={1}
-            />
+        </div>
+
+        {/* posts */}
+        <div class="pt-4">
+          <div class="container">
+            <div class="row">
+              <div class="mx-auto lg:col-10">
+                <div class="row g-4">
+                  {sortPostByDate.slice(0, pagination).map((post) => (
+                    <Post className="col-12 sm:col-6" post={post} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div class="mt-12">
+              <Pagination
+                totalPages={Math.ceil(posts.length / pagination)}
+                currentPage={1}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  )}
+      </>
+    )
+  }
 </Base>
