@@ -4,7 +4,7 @@
     "base_url": "https://sgaldos.myqnapcloud.com",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/developer.png"
+    "favicon": "/images/b&w_developer.png"
   },
 
   "settings": {
@@ -14,7 +14,7 @@
 
   "profile": {
     "name": "Sergio Galdos",
-    "image": "/images/developer.png",
+    "image": "/images/b&w_developer.png",
     "designation": "Full-Stack Developer",
     "bio": "A Full Stack Developer based in Donostia (Spain). Meticulous junior developer, passionate about programming and designing technological solutions."
   },
