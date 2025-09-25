@@ -1,7 +1,7 @@
 {
   "main": [
     {
-      "name": "All Posts",
+      "name": "Home",
       "url": "/"
     },
     {
@@ -11,6 +11,10 @@
     {
       "name": "Elements",
       "url": "/elements"
+    },
+    {
+      "name": "Test",
+      "url": "/test"
     }
   ]
 }

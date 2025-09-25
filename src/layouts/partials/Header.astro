@@ -37,9 +37,14 @@ const combinedMenu: NavigationLink[] = [];
 // Adding the first item of main
 combinedMenu.push(menu.main[0]);
 
+////////// FLAG DRAFT ///////////
+
+const draft = true; // -> change when page is finished
+////////// FLAG DRAFT ///////////
+
 // Adding all categories
 if (
-  pathname.startsWith(menu.main[0].url) &&
+  !draft && pathname.startsWith(menu.main[0].url) &&
   !menu.main.slice(1).some((item) => pathname.startsWith(item.url))
 ) {
   combinedMenu.push(...categories);

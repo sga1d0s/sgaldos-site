@@ -10,6 +10,13 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import { markdownify } from "@/lib/utils/textConverter";
 
+////////// FLAG UNDER CONSTRUCTION ///////////
+import UnderConstruction from "@/components/UnderConstruction.astro";
+
+const draft = true; // -> change when page is finished
+////////// FLAG UNDER CONSTRUCTION ///////////
+
+
 const posts = await getSinglePage("posts");
 const { pagination } = config.settings;
 const { name, image, designation, bio } = config.profile;
@@ -19,7 +26,7 @@ const isProd = import.meta.env.PROD;
 
 <Base>
   {
-    isProd ? (
+    draft ? (
       <>
         <div class="min-h-[75vh] flex items-center justify-center text-center px-6">
           <div class="max-w-2xl">
