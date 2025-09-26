@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Full-Stack Developer",
+    "title": "Sergio Galdos - Full-Stack Developer",
     "base_url": "https://sgaldos.myqnapcloud.com",
     "base_path": "/",
     "trailing_slash": false,
@@ -21,18 +21,18 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2024 a theme by [statichunt](https://statichunt.com)"
+    "copyright": "Copyright © 2025 by Sergio Galdos"
   },
 
   "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
+    "enable": false,
+    "shortname": "",
     "settings": {}
   },
 
   "metadata": {
-    "meta_author": "Statichunt",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
+    "meta_author": "Sergio Galdos",
+    "meta_image": "",
+    "meta_description": "Full-Stack Developer portfolio and professional presentation website"
   }
 }
