@@ -1,0 +1,46 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "contact": "Contact",
+      "projects": "Projects",
+      "back_to_home": "Back to Home",
+      "menu": "Menu",
+      "menu_close": "Close"
+    },
+    "contact_form": {
+      "name": "Name",
+      "name_placeholder": "Alex Smith",
+      "email": "Email",
+      "email_placeholder": "hello@gmail.com",
+      "subject": "Subject",
+      "subject_placeholder": "Reason for contact",
+      "message": "Message",
+      "message_placeholder": "Your message",
+      "send": "Send Message"
+    },
+    "lang_switcher": "ES"
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "contact": "Contacto",
+      "projects": "Proyectos",
+      "back_to_home": "Volver al inicio",
+      "menu": "Menú",
+      "menu_close": "Cerrar"
+    },
+    "contact_form": {
+      "name": "Nombre",
+      "name_placeholder": "Alejandro García",
+      "email": "Email",
+      "email_placeholder": "hola@gmail.com",
+      "subject": "Asunto",
+      "subject_placeholder": "Motivo del contacto",
+      "message": "Mensaje",
+      "message_placeholder": "Tu mensaje",
+      "send": "Enviar mensaje"
+    },
+    "lang_switcher": "EN"
+  }
+}

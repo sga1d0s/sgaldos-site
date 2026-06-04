@@ -15,8 +15,16 @@
   "profile": {
     "name": "Sergio Galdos",
     "image": "/images/b&w_developer.png",
-    "designation": "Full-Stack Developer",
-    "bio": "A Full Stack Developer based in Donostia (Spain). Meticulous junior developer, passionate about programming and designing technological solutions."
+    "translations": {
+      "en": {
+        "designation": "Full-Stack Developer",
+        "bio": "A Full-Stack Developer based in Donostia, Spain. Meticulous junior developer, passionate about programming and designing technological solutions."
+      },
+      "es": {
+        "designation": "Desarrollador Full-Stack",
+        "bio": "Desarrollador Full-Stack afincado en Donostia, España. Desarrollador junior meticuloso, apasionado por la programación y el diseño de soluciones tecnológicas."
+      }
+    }
   },
 
   "params": {
@@ -33,6 +41,13 @@
   "metadata": {
     "meta_author": "Sergio Galdos",
     "meta_image": "",
-    "meta_description": "Full-Stack Developer portfolio and professional presentation website"
+    "translations": {
+      "en": {
+        "meta_description": "Full-Stack Developer portfolio and professional presentation website"
+      },
+      "es": {
+        "meta_description": "Portfolio y página de presentación profesional de un desarrollador Full-Stack"
+      }
+    }
   }
 }

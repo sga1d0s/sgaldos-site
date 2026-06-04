@@ -1,16 +1,16 @@
 {
-  "main": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    },
-    {
-      "name": "Projects",
-      "url": "/projects"
-    }
-  ]
+  "en": {
+    "main": [
+      { "name": "Home", "url": "/" },
+      { "name": "Contact", "url": "/contact" },
+      { "name": "Projects", "url": "/projects" }
+    ]
+  },
+  "es": {
+    "main": [
+      { "name": "Inicio", "url": "/es/" },
+      { "name": "Contacto", "url": "/es/contact" },
+      { "name": "Proyectos", "url": "/es/projects" }
+    ]
+  }
 }

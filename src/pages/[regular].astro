@@ -4,49 +4,46 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { render } from "astro:content";
 
-// get static paths for all pages
+////////// FLAG UNDER CONSTRUCTION ///////////
+import UnderConstruction from "@/components/UnderConstruction.astro";
+const draft = true;
+////////// FLAG UNDER CONSTRUCTION ///////////
+
 export async function getStaticPaths() {
   const pages = await getSinglePage("pages");
+  // only English pages (exclude es/ subfolder)
+  const enPages = pages.filter((p) => !p.id.startsWith("es/"));
 
-  const paths = pages.map((page) => ({
-    params: {
-      regular: page.id,
-    },
+  return enPages.map((page) => ({
+    params: { regular: page.id.replace(/\.(mdx?|md)$/, "") },
     props: { page },
   }));
-  return paths;
 }
 
 const { page } = Astro.props;
 const { title, meta_title, description, image } = page.data;
 const { Content } = await render(page);
-
-////////// FLAG UNDER CONSTRUCTION ///////////
-import UnderConstruction from "@/components/UnderConstruction.astro";
-
-const draft = true; // -> change when page is finished
-////////// FLAG UNDER CONSTRUCTION ///////////
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}>
+<Base title={title} meta_title={meta_title} description={description} image={image}>
   {
-    draft? (<UnderConstruction />): (
-  <PageHeader title={title} />
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            <Content />
+    draft ? (
+      <UnderConstruction />
+    ) : (
+      <>
+        <PageHeader title={title} />
+        <section class="section-sm">
+          <div class="container">
+            <div class="row justify-center">
+              <div class="lg:col-10">
+                <div class="content">
+                  <Content />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
+      </>
     )
   }
 </Base>
