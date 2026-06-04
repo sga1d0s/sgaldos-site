@@ -7,13 +7,4 @@ draft: false
 
 ## Get in touch
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-
-### Location
-
-4140 Parker Rd. Allentown,
-New Mexico 31134
-
-### Phone
-
-+88544767456
+Do you have a project in mind, or do you just want to say hello? Drop me a line and I’ll get back to you as soon as possible.
