@@ -18,11 +18,11 @@
     "translations": {
       "en": {
         "designation": "Full-Stack Developer",
-        "bio": "A Full-Stack Developer based in Donostia, Spain. Meticulous junior developer, passionate about programming and designing technological solutions."
+        "bio": "A Full-Stack Developer based in Donostia, Spain. Passionate about programming and designing technological solutions."
       },
       "es": {
         "designation": "Desarrollador Full-Stack",
-        "bio": "Desarrollador Full-Stack afincado en Donostia, España. Desarrollador junior meticuloso, apasionado por la programación y el diseño de soluciones tecnológicas."
+        "bio": "Desarrollador Full-Stack afincado en Donostia, España. Apasionado por la programación y el diseño de soluciones tecnológicas."
       }
     }
   },
