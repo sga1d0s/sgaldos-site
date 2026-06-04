@@ -12,10 +12,10 @@ const lang = getLang(pathname);
 const t = useTranslations(lang);
 const menu: { main: NavigationLink[] } = menuJson[lang];
 const alternateUrl = getAlternateUrl(pathname);
-const alternateLang = lang === "en" ? "EN" : "ES";
+const alternateLang = lang === "en" ? "ES" : "EN";
 
-const homeUrl = lang === "es" ? "/es/" : "/";
-const isHome = pathname === "/" || pathname === "/es/" || pathname === "/es";
+const homeUrl = lang === "es" ? "/es" : "/";
+const isHome = pathname === "/" || pathname === "/es";
 ---
 
 <header class={`header mt-8 pb-3 pt-12`}>
@@ -91,6 +91,7 @@ const isHome = pathname === "/" || pathname === "/es/" || pathname === "/es";
     <!-- Language switcher -->
     <a
       href={alternateUrl}
+      data-astro-reload
       class="order-2 md:order-3 ml-auto md:ml-0 btn btn-outline-primary text-xs px-3 py-1 rounded font-semibold"
       aria-label={`Switch language to ${alternateLang}`}>
       {alternateLang}

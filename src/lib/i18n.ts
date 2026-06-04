@@ -24,5 +24,5 @@ export function getAlternateUrl(pathname: string): string {
   if (/^\/es(\/|$)/.test(pathname)) {
     return pathname.replace(/^\/es/, "") || "/";
   }
-  return `/es${pathname}`;
+  return pathname === "/" ? "/es" : `/es${pathname}`;
 }

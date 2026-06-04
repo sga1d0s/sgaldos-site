@@ -8,7 +8,7 @@
   },
   "es": {
     "main": [
-      { "name": "Inicio", "url": "/es/" },
+      { "name": "Inicio", "url": "/es" },
       { "name": "Contacto", "url": "/es/contact" },
       { "name": "Proyectos", "url": "/es/projects" }
     ]
