@@ -19,33 +19,37 @@ const isHome = pathname === "/" || pathname === "/es";
 ---
 
 <header class={`header mt-8 pb-3 pt-12`}>
-  <nav class="navbar container text-center md:text-left">
-    <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer btn btn-primary inline-flex items-center lg:order-1 md:hidden">
-      <svg
-        id="show-button"
-        class="mr-1 h-4 w-4 fill-current block"
-        viewBox="0 0 20 20">
-        <title>{t.nav.menu}</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-      <svg
-        id="hide-button"
-        class="mr-1 h-4 w-4 fill-current hidden"
-        viewBox="0 0 20 20">
-        <title>{t.nav.menu_close}</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
-      </svg>
-      {t.nav.menu}
-    </label>
-    <!-- /navbar toggler -->
+  <div class="container relative flex items-center justify-center">
+    <nav class="navbar text-center md:text-left">
+      <!-- navbar toggler -->
+      <input id="nav-toggle" type="checkbox" class="hidden" />
+      <label
+        for="nav-toggle"
+        class="order-3 cursor-pointer btn btn-primary inline-flex items-center lg:order-1 md:hidden"
+      >
+        <svg
+          id="show-button"
+          class="mr-1 h-4 w-4 fill-current block"
+          viewBox="0 0 20 20"
+        >
+          <title>{t.nav.menu}</title>
+          <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+        </svg>
+        <svg
+          id="hide-button"
+          class="mr-1 h-4 w-4 fill-current hidden"
+          viewBox="0 0 20 20"
+        >
+          <title>{t.nav.menu_close}</title>
+          <polygon
+            points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+            transform="rotate(45 10 10)"></polygon>
+        </svg>
+        {t.nav.menu}
+      </label>
+      <!-- /navbar toggler -->
 
-    {
+      <!-- {
       !isHome && (
         <div class="hidden text-center md:block">
           <a
@@ -67,34 +71,37 @@ const isHome = pathname === "/" || pathname === "/es";
           </a>
         </div>
       )
-    }
+    } -->
 
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-3 w-full hidden justify-center md:order-1 md:flex md:w-auto md:space-x-2">
-      {
-        menu.main.map((item) => (
-          <li class="nav-item">
-            <a
-              href={item.url}
-              class={`nav-link inline-block text-text-dark ${
-                (pathname === `${item.url}/` || pathname === item.url) &&
-                "nav-link-active"
-              }`}>
-              {item.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-
+      <ul
+        id="nav-menu"
+        class="navbar-nav order-3 w-full hidden justify-center md:order-1 md:flex md:w-auto md:space-x-2"
+      >
+        {
+          menu.main.map((item) => (
+            <li class="nav-item">
+              <a
+                href={item.url}
+                class={`nav-link inline-block text-text-dark ${
+                  (pathname === `${item.url}/` || pathname === item.url) &&
+                  "nav-link-active"
+                }`}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
     <!-- Language switcher -->
     <a
       href={alternateUrl}
       data-astro-reload
-      class="order-2 md:order-3 ml-auto md:ml-0 btn btn-outline-primary text-xs px-3 py-1 rounded font-semibold"
-      aria-label={`Switch language to ${alternateLang}`}>
+      class="absolute right-10 top-0 btn btn-outline-primary text-xs px-3 py-1 rounded font-semibold"
+      aria-label={`Switch language to ${alternateLang}`}
+    >
       {alternateLang}
     </a>
-  </nav>
+  </div>
 </header>
