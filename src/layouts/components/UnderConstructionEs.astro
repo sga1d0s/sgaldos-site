@@ -1,0 +1,22 @@
+---
+const {
+  title = "En proceso",
+  message = "Esta página aún no está lista. Vuelve a visitarla pronto.",
+  ctaHref = "/",
+  ctaLabel = "Volver al inicio",
+}  = Astro.props;
+---
+
+<section class="section-sm text-center">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="sm:col-10 md:col-8 lg:col-6">
+        <span class="block font-bold text-text-dark text-6xl mb-2">
+          {title}
+        </span>
+        <p class="text-lg mb-6">{message}</p>
+        <a href={ctaHref} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </div>
+</section>

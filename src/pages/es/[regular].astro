@@ -4,6 +4,11 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { render } from "astro:content";
 
+////////// FLAG UNDER CONSTRUCTION ///////////
+import UnderConstructionEs from "@/components/UnderConstructionEs.astro";
+const draft = true;
+////////// FLAG UNDER CONSTRUCTION ///////////
+
 export async function getStaticPaths() {
   const pages = await getSinglePage("pages");
   // only Spanish pages (es/ subfolder)
@@ -21,16 +26,24 @@ const { Content } = await render(page);
 ---
 
 <Base title={title} meta_title={meta_title} description={description} image={image}>
-  <PageHeader title={title} />
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            <Content />
+  {
+    draft ? (
+      <UnderConstructionEs />
+    ) : (
+      <>
+        <PageHeader title={title} />
+        <section class="section-sm">
+          <div class="container">
+            <div class="row justify-center">
+              <div class="lg:col-10">
+                <div class="content">
+                  <Content />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
+      </>
+    )
+  }
 </Base>
