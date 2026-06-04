@@ -27,8 +27,7 @@ const { Content } = await render(contact);
               set:html={markdownify(title)}
               class="h5 font-normal text-3xl"
             />
-            <form class="contact-form mt-6" action={contact_form_action} method="POST">
-              <input type="hidden" name="_next" value={`${config.site.base_url}/es/thanks`} />
+            <form id="contact-form" class="contact-form mt-6">
               <div class="row mb-6">
                 <div class="md:col-6">
                   <label class="mb-2 block" for="name">{t.contact_form.name}</label>
@@ -69,7 +68,7 @@ const { Content } = await render(contact);
                   placeholder={t.contact_form.message_placeholder}
                 />
               </div>
-              <button class="btn btn-primary cursor-pointer rounded text-sm">
+              <button type="submit" class="btn btn-primary cursor-pointer rounded text-sm">
                 {t.contact_form.send}
               </button>
             </form>
@@ -79,3 +78,19 @@ const { Content } = await render(contact);
     </div>
   </section>
 </Base>
+
+<script define:vars={{ action: contact_form_action }}>
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+    if (res.ok) {
+      window.location.href = "/es/thanks";
+    }
+  });
+</script>
