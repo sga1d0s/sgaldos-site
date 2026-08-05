@@ -5,7 +5,7 @@ export type ProjectLink = {
 };
 
 export type Project = {
-  id: "prepago" | "demain" | "rentalmoto" | "react-native";
+  id: "erp" | "demain" | "rentalmoto" | "react-native";
   number: string;
   eyebrow: string;
   title: string;
@@ -40,7 +40,7 @@ export const projectsCopy: Record<"es" | "en", ProjectsCopy> = {
     metaDescription:
       "Selección de proyectos web, aplicaciones de gestión y desarrollos móviles de Sergio Galdos.",
     eyebrow: "Portfolio / proyectos seleccionados",
-    title: "Productos digitales con problemas reales detrás.",
+    title: "Productos digitales soluciones reales.",
     introduction:
       "Una selección de webs y aplicaciones que he diseñado y desarrollado, desde la interfaz hasta la lógica de negocio.",
     capabilities: [
@@ -61,12 +61,12 @@ export const projectsCopy: Record<"es" | "en", ProjectsCopy> = {
     closeLink: "Contactar",
     projects: [
       {
-        id: "prepago",
+        id: "erp",
         number: "01",
         eyebrow: "Aplicación de gestión · Proyecto destacado",
-        title: "Prepago",
+        title: "ERP a medida",
         description:
-          "Aplicación de negocio desarrollada con Laravel y PHP para centralizar procesos, datos y operaciones en una única herramienta.",
+          "Plataforma integral desarrollada con Laravel y PHP para centralizar procesos, datos y operaciones en una única herramienta.",
         note: "La demostración se publicará anonimizada para proteger la información real del proyecto.",
         stack: ["Laravel", "PHP", "MySQL", "JavaScript"],
         links: [{ label: "Vídeo próximamente", kind: "primary" }],
@@ -150,10 +150,10 @@ export const projectsCopy: Record<"es" | "en", ProjectsCopy> = {
     closeLink: "Get in touch",
     projects: [
       {
-        id: "prepago",
+        id: "erp",
         number: "01",
         eyebrow: "Management application · Featured project",
-        title: "Prepago",
+        title: "Custom ERP",
         description:
           "A business application built with Laravel and PHP to bring processes, data and operations into a single tool.",
         note: "The demo will be anonymised to protect real project information.",
