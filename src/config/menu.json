@@ -2,15 +2,17 @@
   "en": {
     "main": [
       { "name": "Home", "url": "/" },
-      { "name": "Contact", "url": "/contact" },
-      { "name": "Projects", "url": "/projects" }
+      { "name": "Experience", "url": "/experience" },
+      { "name": "Projects", "url": "/projects" },
+      { "name": "Contact", "url": "/contact" }
     ]
   },
   "es": {
     "main": [
       { "name": "Inicio", "url": "/es" },
-      { "name": "Contacto", "url": "/es/contact" },
-      { "name": "Proyectos", "url": "/es/projects" }
+      { "name": "Experiencia", "url": "/es/experiencia" },
+      { "name": "Proyectos", "url": "/es/projects" },
+      { "name": "Contacto", "url": "/es/contact" }
     ]
   }
 }

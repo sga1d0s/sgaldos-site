@@ -1,0 +1,11 @@
+---
+import ExperienceShowcase from "@/components/ExperienceShowcase.astro";
+import { experienceCopy } from "@/data/experience";
+import Base from "@/layouts/Base.astro";
+
+const copy = experienceCopy.es;
+---
+
+<Base title={copy.metaTitle} description={copy.metaDescription}>
+  <ExperienceShowcase lang="es" />
+</Base>

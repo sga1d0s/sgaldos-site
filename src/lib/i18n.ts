@@ -21,6 +21,12 @@ export function getMetaTranslation(lang: Lang) {
 
 /** Given the current pathname, returns the URL for the alternate language */
 export function getAlternateUrl(pathname: string): string {
+  if (/^\/es\/experiencia\/?$/.test(pathname)) {
+    return "/experience";
+  }
+  if (/^\/experience\/?$/.test(pathname)) {
+    return "/es/experiencia";
+  }
   if (/^\/es(\/|$)/.test(pathname)) {
     return pathname.replace(/^\/es/, "") || "/";
   }
