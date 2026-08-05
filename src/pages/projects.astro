@@ -1,0 +1,11 @@
+---
+import ProjectsShowcase from "@/components/ProjectsShowcase.astro";
+import { projectsCopy } from "@/data/projects";
+import Base from "@/layouts/Base.astro";
+
+const copy = projectsCopy.en;
+---
+
+<Base title={copy.metaTitle} description={copy.metaDescription}>
+  <ProjectsShowcase lang="en" />
+</Base>

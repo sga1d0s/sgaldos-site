@@ -12,10 +12,14 @@ const draft = true;
 export async function getStaticPaths() {
   const pages = await getSinglePage("pages");
   // only Spanish pages (es/ subfolder)
-  const esPages = pages.filter((p) => p.id.startsWith("es/"));
+  const esPages = pages.filter(
+    (p) => p.id.startsWith("es/") && p.id !== "es/projects",
+  );
 
   return esPages.map((page) => ({
-    params: { regular: page.id.replace(/^es\//, "").replace(/\.(mdx?|md)$/, "") },
+    params: {
+      regular: page.id.replace(/^es\//, "").replace(/\.(mdx?|md)$/, ""),
+    },
     props: { page },
   }));
 }
@@ -25,7 +29,12 @@ const { title, meta_title, description, image } = page.data;
 const { Content } = await render(page);
 ---
 
-<Base title={title} meta_title={meta_title} description={description} image={image}>
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
   {
     draft ? (
       <UnderConstructionEs />
