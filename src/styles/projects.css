@@ -5,7 +5,7 @@
 }
 .projects-hero {
   padding-top: 5.5rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 4rem;
 }
 .projects-kicker,
 .project-eyebrow {
@@ -663,7 +663,7 @@
 @media (max-width: 720px) {
   .projects-hero {
     padding-top: 3.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
   .mobile-projects {
     grid-template-columns: 1fr;

@@ -44,3 +44,9 @@
 .contact-form-panel form {
   margin-top: 2.5rem;
 }
+
+@media (max-width: 720px) {
+  .contact-hero {
+    padding-top: 3.5rem;
+  }
+}
