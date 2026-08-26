@@ -11,12 +11,15 @@
 }
 
 .showcase-wide {
-  max-width: var(--showcase-wide);
+  width: 100%;
+  max-width: var(--showcase-wide) !important;
   margin-inline: auto;
 }
 
 .showcase-reading {
-  max-width: var(--showcase-reading);
+  width: 100%;
+  max-width: var(--showcase-reading) !important;
+  margin-inline: auto;
 }
 
 .showcase-page > section {
