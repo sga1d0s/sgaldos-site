@@ -3,21 +3,12 @@
   overflow: hidden;
 }
 
-.contact-hero {
-  padding-top: 5.5rem;
-  padding-bottom: 2rem;
-}
-
 .contact-hero .content {
   margin-top: 2rem;
 }
 
 .contact-hero .content p {
   margin: 0;
-}
-
-.contact-form-section {
-  padding-top: 2rem;
 }
 
 .contact-form-panel {
@@ -43,10 +34,4 @@
 
 .contact-form-panel form {
   margin-top: 2.5rem;
-}
-
-@media (max-width: 720px) {
-  .contact-hero {
-    padding-top: 3.5rem;
-  }
 }

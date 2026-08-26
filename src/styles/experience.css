@@ -9,10 +9,6 @@
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
-.experience-hero {
-  padding-top: 5.5rem;
-  padding-bottom: 4rem;
-}
 .hero-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -48,9 +44,6 @@
 }
 .download-link:hover span {
   color: #102018;
-}
-.profile-section {
-  padding-top: 2rem;
 }
 .profile-panel {
   display: grid;
@@ -320,9 +313,6 @@
 .cv-panel .download-link {
   margin-top: 2rem;
 }
-.contact-section {
-  padding-top: 1.25rem;
-}
 .contact-panel {
   display: flex;
   justify-content: space-between;
@@ -380,10 +370,6 @@
   }
 }
 @media (max-width: 720px) {
-  .experience-hero {
-    padding-top: 3.5rem;
-    padding-bottom: 2rem;
-  }
   .hero-footer,
   .profile-panel,
   .timeline-entry {

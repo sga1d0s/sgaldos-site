@@ -7,6 +7,7 @@
   --showcase-text-small: 0.9375rem;
   --showcase-text-label: 0.875rem;
   --showcase-text-mock: 0.75rem;
+  --showcase-section-gap: 5rem;
 }
 
 .showcase-wide {
@@ -16,6 +17,15 @@
 
 .showcase-reading {
   max-width: var(--showcase-reading);
+}
+
+.showcase-page > section {
+  padding-top: 0;
+  padding-bottom: var(--showcase-section-gap);
+}
+
+.showcase-page > .showcase-hero {
+  padding-top: 5.5rem;
 }
 
 .showcase-hero h1 {
@@ -60,6 +70,14 @@
 }
 
 @media (max-width: 720px) {
+  .showcase-page {
+    --showcase-section-gap: 4rem;
+  }
+
+  .showcase-page > .showcase-hero {
+    padding-top: 3.5rem;
+  }
+
   .showcase-section-heading {
     align-items: flex-start;
     flex-direction: column;
