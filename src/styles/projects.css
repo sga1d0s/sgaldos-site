@@ -14,14 +14,6 @@
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
-.projects-hero h1 {
-  max-width: 980px;
-  margin-top: 1.4rem;
-  font-size: clamp(3rem, 7vw, 6.8rem);
-  font-weight: 500;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-}
 .projects-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
@@ -30,11 +22,6 @@
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
-}
-.projects-intro p {
-  max-width: 720px;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  line-height: 1.7;
 }
 .projects-intro ul {
   display: flex;
@@ -52,22 +39,6 @@
 }
 .projects-list {
   padding-top: 2rem;
-}
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 1.5rem;
-}
-.section-heading h2 {
-  font-size: 1rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-.section-heading span {
-  color: #81909c;
-  font-size: 0.75rem;
 }
 .project {
   position: relative;
@@ -642,7 +613,7 @@
 }
 .cta-panel h2 {
   margin-top: 0.8rem;
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: var(--showcase-h2);
   font-weight: 500;
   letter-spacing: -0.04em;
 }
@@ -693,9 +664,6 @@
   .projects-hero {
     padding-top: 3.5rem;
     padding-bottom: 2.5rem;
-  }
-  .projects-hero h1 {
-    font-size: clamp(2.8rem, 14vw, 4.7rem);
   }
   .mobile-projects {
     grid-template-columns: 1fr;

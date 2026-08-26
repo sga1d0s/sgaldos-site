@@ -1,6 +1,7 @@
 ---
 import { experienceCopy } from "@/data/experience";
 import "@/styles/experience.css";
+import "@/styles/showcase.css";
 
 interface Props {
   lang?: "es" | "en";
@@ -12,12 +13,12 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
 ---
 
 <div class="experience-page">
-  <section class="experience-hero section-sm">
-    <div class="container">
+  <section class="experience-hero showcase-hero section-sm">
+    <div class="container showcase-wide">
       <p class="section-kicker">{copy.eyebrow}</p>
       <h1>{copy.title}</h1>
       <div class="hero-footer">
-        <p>{copy.introduction}</p>
+        <p class="showcase-intro showcase-reading">{copy.introduction}</p>
         <a class="download-link" href={copy.cvUrl} download>
           {copy.downloadCv}<span aria-hidden="true">↓</span>
         </a>
@@ -26,7 +27,7 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
   </section>
 
   <section class="profile-section section-sm">
-    <div class="container">
+    <div class="container showcase-wide">
       <div class="profile-panel">
         <div class="profile-number">01</div>
         <div class="profile-heading">
@@ -44,13 +45,13 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
   </section>
 
   <section class="timeline-section section-sm" aria-labelledby="timeline-title">
-    <div class="container">
-      <div class="section-heading">
+    <div class="container showcase-wide">
+      <div class="showcase-section-heading">
         <div>
-          <span>02</span>
+          <span class="showcase-section-index">02</span>
           <h2 id="timeline-title">{copy.timelineTitle}</h2>
         </div>
-        <span>2004 — {copy.present}</span>
+        <span class="showcase-section-meta">2004 — {copy.present}</span>
       </div>
 
       <div class="timeline">
@@ -99,7 +100,7 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
   </section>
 
   <section class="skills-section section-sm" aria-labelledby="skills-title">
-    <div class="container">
+    <div class="container showcase-wide">
       <div class="skills-panel">
         <div class="skills-intro">
           <span>03</span>
@@ -126,7 +127,7 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
   </section>
 
   <section class="details-section section-sm">
-    <div class="container details-grid">
+    <div class="container showcase-wide details-grid">
       <div class="education-panel">
         <div class="detail-heading">
           <span>04</span>
@@ -176,7 +177,7 @@ const contactUrl = lang === "es" ? "/es/contact" : "/contact";
   </section>
 
   <section class="contact-section section-sm">
-    <div class="container">
+    <div class="container showcase-wide">
       <div class="contact-panel">
         <div>
           <p class="section-kicker">{copy.contactLabel}</p>

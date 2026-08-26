@@ -1,6 +1,7 @@
 ---
 import { projectsCopy } from "@/data/projects";
 import "@/styles/projects.css";
+import "@/styles/showcase.css";
 
 interface Props {
   lang?: "es" | "en";
@@ -13,12 +14,12 @@ const [featured, ecosystem, ...mobileProjects] = copy.projects;
 ---
 
 <div class="projects-page">
-  <section class="projects-hero section-sm">
-    <div class="container">
+  <section class="projects-hero showcase-hero section-sm">
+    <div class="container showcase-wide">
       <p class="projects-kicker">{copy.eyebrow}</p>
       <h1>{copy.title}</h1>
       <div class="projects-intro">
-        <p>{copy.introduction}</p>
+        <p class="showcase-intro showcase-reading">{copy.introduction}</p>
         <ul aria-label="Capabilities">
           {copy.capabilities.map((capability) => <li>{capability}</li>)}
         </ul>
@@ -27,10 +28,13 @@ const [featured, ecosystem, ...mobileProjects] = copy.projects;
   </section>
 
   <section class="projects-list section-sm" aria-labelledby="selected-work">
-    <div class="container">
-      <div class="section-heading">
-        <h2 id="selected-work">{copy.selectedWork}</h2>
-        <span>01 — 04</span>
+    <div class="container showcase-wide">
+      <div class="showcase-section-heading">
+        <div>
+          <span class="showcase-section-index">01</span>
+          <h2 id="selected-work">{copy.selectedWork}</h2>
+        </div>
+        <span class="showcase-section-meta">01 — 04</span>
       </div>
 
       <article class="project project-featured">
@@ -208,7 +212,7 @@ const [featured, ecosystem, ...mobileProjects] = copy.projects;
   </section>
 
   <section class="projects-cta section-sm">
-    <div class="container">
+    <div class="container showcase-wide">
       <div class="cta-panel">
         <div>
           <p class="projects-kicker">
