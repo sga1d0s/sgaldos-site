@@ -10,7 +10,7 @@
 .projects-kicker,
 .project-eyebrow {
   color: var(--color-primary);
-  font-size: 0.76rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -34,7 +34,7 @@
   border: 1px solid var(--color-border);
   border-radius: 999px;
   padding: 0.42rem 0.75rem;
-  font-size: 0.77rem;
+  font-size: var(--showcase-text-label);
   color: var(--color-text);
 }
 .projects-list {
@@ -55,7 +55,7 @@
 .project-index {
   margin-bottom: 2.5rem;
   color: #71808b;
-  font-size: 0.8rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.16em;
 }
 .project h3 {
@@ -75,7 +75,7 @@
   padding-left: 1rem;
   border-left: 2px solid var(--color-primary);
   color: #9cabb6;
-  font-size: 0.85rem;
+  font-size: var(--showcase-text-small);
   line-height: 1.6;
 }
 .project-stack {
@@ -100,7 +100,7 @@
   border: 1px solid var(--color-border);
   border-radius: 0.65rem;
   color: white;
-  font-size: 0.86rem;
+  font-size: var(--showcase-text-small);
   text-decoration: none;
   transition:
     border-color 0.2s,
@@ -161,7 +161,7 @@
 .browser-bar span {
   margin-left: 0.45rem;
   color: #84939d;
-  font-size: 0.58rem;
+  font-size: var(--showcase-text-mock);
   letter-spacing: 0.12em;
 }
 .dashboard-shell {
@@ -247,7 +247,7 @@
   border-radius: 999px;
   background: rgba(16, 25, 32, 0.9);
   color: #bdc8cf;
-  font-size: 0.72rem;
+  font-size: var(--showcase-text-label);
 }
 .play-icon {
   display: grid;
@@ -257,7 +257,7 @@
   border-radius: 50%;
   background: var(--color-primary);
   color: #14221a;
-  font-size: 0.55rem;
+  font-size: var(--showcase-text-mock);
 }
 .project-ecosystem {
   margin-top: 1.25rem;
@@ -318,7 +318,7 @@
 }
 .website-copy small {
   color: #d56527;
-  font-size: 0.5rem;
+  font-size: var(--showcase-text-mock);
   font-weight: 700;
 }
 .website-copy strong {
@@ -344,7 +344,7 @@
   border-radius: 0.4rem;
   background: #e26d2c;
   color: white;
-  font-size: 0.58rem;
+  font-size: var(--showcase-text-mock);
 }
 .website-image {
   min-height: 245px;
@@ -396,10 +396,10 @@
   border-radius: 7px;
   background: #1b1b1b;
   color: white;
-  font-size: 0.7rem;
+  font-size: var(--showcase-text-mock);
 }
 .app-header span {
-  font-size: 0.65rem;
+  font-size: var(--showcase-text-mock);
   font-weight: 700;
 }
 .app-filter {
@@ -585,7 +585,7 @@
   border-radius: 999px;
   background: rgba(17, 26, 33, 0.8);
   color: #9dabb4;
-  font-size: 0.67rem;
+  font-size: var(--showcase-text-mock);
 }
 .mobile-project-copy {
   padding: clamp(1.5rem, 4vw, 2.5rem);

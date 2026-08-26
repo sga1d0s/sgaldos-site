@@ -5,7 +5,7 @@
 }
 .section-kicker {
   color: var(--color-primary);
-  font-size: 0.76rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -67,7 +67,7 @@
 .skills-intro > span,
 .detail-heading > span {
   color: #768691;
-  font-size: 0.75rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.14em;
 }
 .profile-heading h2 {
@@ -91,7 +91,7 @@
   padding: 0.8rem 1rem 0.8rem 2rem;
   border: 1px solid var(--color-border);
   border-radius: 0.7rem;
-  font-size: 0.84rem;
+  font-size: var(--showcase-text-small);
 }
 .profile-content li::before {
   position: absolute;
@@ -117,11 +117,11 @@
   border: 1px solid #3e5360;
   border-radius: 50%;
   color: var(--color-primary);
-  font-size: 0.66rem;
+  font-size: var(--showcase-text-mock);
 }
 .timeline-period {
   color: #8e9ca6;
-  font-size: 0.78rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.04em;
 }
 .timeline-company h3 {
@@ -131,7 +131,7 @@
 .timeline-company p {
   margin-top: 0.35rem;
   color: var(--color-primary);
-  font-size: 0.86rem;
+  font-size: var(--showcase-text-small);
 }
 .timeline-details > p {
   line-height: 1.75;
@@ -147,7 +147,7 @@
   padding: 0.38rem 0.68rem;
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  font-size: 0.72rem;
+  font-size: var(--showcase-text-label);
 }
 .previous-experience {
   margin-top: 4rem;
@@ -178,12 +178,12 @@
   display: block;
   margin-top: 0.3rem;
   color: var(--color-primary);
-  font-size: 0.83rem;
+  font-size: var(--showcase-text-small);
   font-weight: 400;
 }
 .previous-grid article > p:last-child {
   margin-top: 1rem;
-  font-size: 0.88rem;
+  font-size: var(--showcase-text-small);
   line-height: 1.65;
 }
 .skills-panel {
@@ -221,7 +221,7 @@
   border-bottom: 0;
 }
 .skill-group h3 {
-  font-size: 0.8rem;
+  font-size: var(--showcase-text-label);
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -269,7 +269,7 @@
 }
 .education-list article > span {
   color: var(--color-primary);
-  font-size: 0.8rem;
+  font-size: var(--showcase-text-label);
 }
 .education-list h3 {
   font-size: 1.05rem;

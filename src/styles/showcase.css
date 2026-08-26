@@ -4,6 +4,9 @@
   --showcase-h1: clamp(3rem, 6vw, 6rem);
   --showcase-h2: clamp(2rem, 3.5vw, 3.5rem);
   --showcase-intro: clamp(1.125rem, 1.7vw, 1.35rem);
+  --showcase-text-small: 0.9375rem;
+  --showcase-text-label: 0.875rem;
+  --showcase-text-mock: 0.75rem;
 }
 
 .showcase-wide {
@@ -52,7 +55,7 @@
 .showcase-section-index,
 .showcase-section-meta {
   color: #768691;
-  font-size: 0.75rem;
+  font-size: var(--showcase-text-label);
   letter-spacing: 0.14em;
 }
 
