@@ -40,7 +40,7 @@ export const projectsCopy: Record<"es" | "en", ProjectsCopy> = {
     metaDescription:
       "Selección de proyectos web, aplicaciones de gestión y desarrollos móviles de Sergio Galdos.",
     eyebrow: "Portfolio / proyectos seleccionados",
-    title: "Productos digitales soluciones reales.",
+    title: "Productos digitales, soluciones reales.",
     introduction:
       "Una selección de webs y aplicaciones que he diseñado y desarrollado, desde la interfaz hasta la lógica de negocio.",
     capabilities: [

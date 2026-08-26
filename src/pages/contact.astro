@@ -2,93 +2,103 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { useTranslations } from "@/lib/i18n";
-import { markdownify } from "@/lib/utils/textConverter";
+import "@/styles/contact.css";
+import "@/styles/showcase.css";
 import type { CollectionEntry } from "astro:content";
 import { getEntry, render } from "astro:content";
 
-////////// FLAG UNDER CONSTRUCTION ///////////
-import UnderConstruction from "@/components/UnderConstruction.astro";
-const draft = false;
-////////// FLAG UNDER CONSTRUCTION ///////////
-
 const lang = "en";
 const t = useTranslations(lang);
-const contact = (await getEntry("contact", "-index")) as CollectionEntry<"contact">;
+const contact = (await getEntry(
+  "contact",
+  "-index",
+)) as CollectionEntry<"contact">;
 const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title } = contact.data;
 const { Content } = await render(contact);
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
-  {
-    draft ? (
-      <UnderConstruction />
-    ) : (
-      <section class="section pt-[72px]">
-        <div class="container">
-          <div class="row">
-            <div class="mx-auto lg:col-8">
-              <div class="content">
-                <Content />
-              </div>
-              <div class="mt-12 pt-12">
-                <h3
-                  set:html={markdownify(title)}
-                  class="h5 font-normal text-3xl"
+  <div class="contact-page">
+    <section class="contact-hero showcase-hero section-sm">
+      <div class="container showcase-reading">
+        <h1>{title}</h1>
+        <div class="content showcase-intro">
+          <Content />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="contact-form-section section-sm"
+      aria-labelledby="contact-form-title"
+    >
+      <div class="container showcase-reading">
+        <div class="contact-form-panel">
+          <div class="contact-form-heading">
+            <h2 id="contact-form-title">{t.contact_form.heading}</h2>
+            <p>{t.contact_form.introduction}</p>
+          </div>
+          <form id="contact-form" class="contact-form">
+            <div class="row mb-6">
+              <div class="md:col-6">
+                <label class="mb-2 block" for="name"
+                  >{t.contact_form.name}</label
+                >
+                <input
+                  class="form-input w-full"
+                  name="name"
+                  type="text"
+                  placeholder={t.contact_form.name_placeholder}
+                  required
                 />
-                <form id="contact-form" class="contact-form mt-6">
-                  <div class="row mb-6">
-                    <div class="md:col-6">
-                      <label class="mb-2 block" for="name">{t.contact_form.name}</label>
-                      <input
-                        class="form-input w-full"
-                        name="name"
-                        type="text"
-                        placeholder={t.contact_form.name_placeholder}
-                        required
-                      />
-                    </div>
-                    <div class="mt-6 md:mt-0 md:col-6">
-                      <label class="mb-2 block" for="email">{t.contact_form.email}</label>
-                      <input
-                        class="form-input w-full"
-                        name="email"
-                        type="email"
-                        placeholder={t.contact_form.email_placeholder}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="mb-6">
-                    <label class="mb-2 block" for="subject">{t.contact_form.subject}</label>
-                    <input
-                      class="form-input w-full"
-                      name="subject"
-                      type="text"
-                      placeholder={t.contact_form.subject_placeholder}
-                      required
-                    />
-                  </div>
-                  <div class="mb-6">
-                    <label class="mb-2 block" for="message">{t.contact_form.message}</label>
-                    <textarea
-                      class="form-textarea w-full"
-                      name="message"
-                      rows="6"
-                      placeholder={t.contact_form.message_placeholder}
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary cursor-pointer rounded text-sm">
-                    {t.contact_form.send}
-                  </button>
-                </form>
+              </div>
+              <div class="mt-6 md:mt-0 md:col-6">
+                <label class="mb-2 block" for="email"
+                  >{t.contact_form.email}</label
+                >
+                <input
+                  class="form-input w-full"
+                  name="email"
+                  type="email"
+                  placeholder={t.contact_form.email_placeholder}
+                  required
+                />
               </div>
             </div>
-          </div>
+            <div class="mb-6">
+              <label class="mb-2 block" for="subject"
+                >{t.contact_form.subject}</label
+              >
+              <input
+                class="form-input w-full"
+                name="subject"
+                type="text"
+                placeholder={t.contact_form.subject_placeholder}
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label class="mb-2 block" for="message"
+                >{t.contact_form.message}</label
+              >
+              <textarea
+                class="form-textarea w-full"
+                name="message"
+                rows="6"
+                placeholder={t.contact_form.message_placeholder}></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary cursor-pointer rounded text-sm"
+            >
+              {t.contact_form.send}
+            </button>
+          </form>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  </div>
 </Base>
 
 <script define:vars={{ action: contact_form_action }}>

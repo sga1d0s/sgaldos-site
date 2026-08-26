@@ -1,10 +1,8 @@
 ---
-title: "Contacta conmigo"
+title: "Hablemos"
 meta_title: ""
-description: "Formulario de contacto"
+description: "Contacta con Sergio Galdos para hablar sobre un proyecto web, móvil o Full-Stack."
 draft: false
 ---
-
-## Hablemos
 
 ¿Tienes un proyecto en mente o simplemente quieres saludar? Escríbeme y te respondo lo antes posible.

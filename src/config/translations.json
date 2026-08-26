@@ -10,6 +10,8 @@
       "menu_close": "Close"
     },
     "contact_form": {
+      "heading": "Tell me about your project",
+      "introduction": "Share a little context and I’ll get back to you as soon as possible.",
       "name": "Name",
       "name_placeholder": "Alex Smith",
       "email": "Email",
@@ -33,6 +35,8 @@
       "menu_close": "Cerrar"
     },
     "contact_form": {
+      "heading": "Cuéntame sobre tu proyecto",
+      "introduction": "Cuéntame un poco de contexto y te responderé lo antes posible.",
       "name": "Nombre",
       "name_placeholder": "Alejandro García",
       "email": "Email",
